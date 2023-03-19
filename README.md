@@ -16,7 +16,7 @@ This project focuses on analyzing a dataset of biomedical literature to answer a
 **metadata.csv:** metadata for the papers. (Excluded from this repository due to concerns regarding privacy.)\
 **file-list.csv:** doi/file name reference. (Excluded from this repository due to concerns regarding privacy.)\
 **abstracts:** Directory containing all the abstracts. (Excluded from this repository due to concerns regarding privacy.)\
-**infectious_classifier:** Directory for the trained classifier for infectious diseases.\
+**infectious_classifier:** Directory for the trained classifier for infectious diseases. (Excluded from this repository. Please download from the shared link.)\
 **relevance:** Directory for storing the generated relevant papers for given subjects.\
 **output:** Directory for storing the generated visualizations, data, and other output files.
 

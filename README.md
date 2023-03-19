@@ -38,6 +38,8 @@ scipy\
 sentence_transformers\
 torch
 
+## Hardware
+GPUs were used while training the classifier and embedding the abstracts.
 
 ## License
 

@@ -26,6 +26,7 @@ metadata = metadata.drop_duplicates(subset=['doi'], keep='last')
 file_list = read_csv_to_df(fFile_list)
 
 
+# reading infectious and non-infectious abstract
 infectious_doi = column_to_doi(metadata, 'category', infectious_category)
 noninfectious_doi = column_to_doi(metadata, 'category', noninfectious_category)
 print(len(infectious_doi), len(noninfectious_doi))
@@ -48,6 +49,7 @@ train_dataset = AbstractDataset(train_encoding, y_train)
 val_dataset = AbstractDataset(val_encoding, y_val)
 test_dataset = AbstractDataset(test_encoding, y_test)
 
+# Training the model
 training_args = TrainingArguments(
     output_dir=model_dir,
     logging_dir=model_dir+"logs/",
@@ -106,6 +108,6 @@ pos_meta['doc_name'] = doi_to_file(file_list, pos_doi)
 neg_meta['doc_name'] = doi_to_file(file_list, neg_doi)
 
 save_df_to_csv(pos_meta, fPos)
-save_df_to_csv(pos_meta, fNeg)
+save_df_to_csv(neg_meta, fNeg)
 
 
